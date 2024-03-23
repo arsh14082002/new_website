@@ -1,0 +1,50 @@
+.tag_page {
+  .tag_page_boxes {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    place-content: center;
+    gap: 70px;
+
+    .box {
+      // border: 1px solid red;
+      text-align: center;
+      padding: 30px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      // background: linear-gradient(145deg, #cacaca, #f0f0f0);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+
+      h3 {
+        font-size: 20px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #726d6d;
+      }
+
+      .box_para {
+        margin: 10px 0;
+
+        p {
+          color: #726d6d;
+        }
+      }
+
+      .blog_direct_link {
+        padding: 10px 20px;
+        background: #726d6d;
+        color: #fff;
+        border-radius: 10px;
+      }
+
+      .box_data {
+        p {
+          text-align: right;
+        }
+      }
+    }
+  }
+}

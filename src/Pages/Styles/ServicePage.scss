@@ -1,0 +1,40 @@
+.service_page {
+  margin-top: 30px;
+  h1 {
+    text-align: center;
+    font-size: 65px;
+    letter-spacing: 2px;
+    color: #827171;
+  }
+
+  .service_page_boxes {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: auto;
+    place-content: center;
+    gap: 50px;
+
+    .service_page_box {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      padding: 40px 10px;
+      border-radius: 10px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 20px;
+
+      button {
+        background: #827171;
+        padding: 10px;
+        color: #fff;
+        border-radius: 10px;
+        font-weight: 600;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
