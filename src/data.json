@@ -5,7 +5,7 @@
       "description": "Leading in CCTV services, quality products, expert service, competitive prices."
     },
     {
-      "name": "Website Development & Design",
+      "name": "Website Designs & Design",
       "description": "Create stunning websites tailored to your needs."
     },
     {
@@ -22,7 +22,7 @@
     },
 
     {
-      "name": "Mobile Accessories & Telecom",
+      "name": "Mobile & Computers Accessories",
       "description": "Top-quality tech services at unbeatable prices, from accessories to repairs."
     }
   ],
@@ -31,7 +31,12 @@
     {
       "name": "Mohd Minhaj",
       "designation": "Founder & CEO",
-      "description": "Meet Sam, the heart and brains behind SecureYourself. As the founder and CEO, he's the big boss who makes sure everything runs smoothly. Sam is super passionate about keeping people and businesses safe in today's digital world. He's always coming up with clever ideas to make our security solutions top-notch. With Sam leading the way, SecureYourself is all about staying one step ahead of the bad guys and giving you peace of mind."
+      "description": "Meet Sam, the heart and brains behind SecureYourself. As the founder and CEO, he's the big boss who makes sure everything runs smoothly. Sam is super passionate about keeping people and businesses safe in today's digital world. He's always coming up with clever ideas to make our security solutions top-notch. With Sam leading the way, SecureYourself is all about staying one step ahead of the bad guys and giving you peace of mind.",
+      "contact": [
+        {
+          "mobile": "+919999629495"
+        }
+      ]
     },
     {
       "name": "Mohd Arsalan",
@@ -76,6 +81,7 @@
       "author": "Aya Nagar, Delhi"
     }
   ],
+
   "faq": [
     {
       "Q": "Q: Can I design my own website without hiring a web designer?",

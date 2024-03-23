@@ -22,7 +22,10 @@ const ServicePage = () => {
         <title>{formatSlug(slug)} | SERVICES | SECUREYOURSELF</title>
       </Helmet>
 
-      <h1>{formatSlug(slug)}</h1>
+      <div className="blogs_head">
+        <h1>{formatSlug(slug)}</h1>
+      </div>
+
       <div className="service_page_boxes">
         {serviceData &&
           serviceData[slug].map((service, i) => (

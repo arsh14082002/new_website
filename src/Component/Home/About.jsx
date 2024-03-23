@@ -26,6 +26,8 @@ const About = () => {
         </p>{' '}
       </div>
 
+      <h3>{process.env.REACT_APP_YOUR_SERVICE_ID}</h3>
+
       <div className="about_link">
         <Link to="/about">More About Us.</Link>
       </div>

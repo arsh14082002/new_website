@@ -28,78 +28,81 @@
       }
     ]
   },
+
   {
     "cctv-surveillance": [
       {
-        "name": "CCTV Serveillance",
+        "name": "CCTV Installation",
         "description": " Stay one step ahead of your competitors by leveraging our professional SEO services to attract qualified traffic to your website. ",
         "price": "$1000 - $5000 per month"
       },
       {
-        "name": "Pay-Per-Click Advertising (PPC)",
+        "name": "Video Door Phone(VDP)",
         "description": "Advertising model where businesses pay a fee each time their ad is clicked, driving traffic to their website.",
         "price": "Varies based on campaign budget and targeting"
       },
       {
-        "name": "Social Media Marketing (SMM)",
+        "name": "PTZ Camera Installation",
         "description": " Fine-tune social media marketing strategy to grow your business digitally across the globe by using social media platforms and paid campaigns. ",
         "price": "$500 - $5000 per month"
       },
       {
-        "name": "Email Marketing",
+        "name": "Door Lock",
         "description": "Sending targeted emails to a specific audience to promote your products or services, nurture leads, and build customer relationships.",
         "price": "$300 - $2000 per month"
       },
       {
-        "name": "Content Marketing",
+        "name": "Monitoring",
         "description": "Creating and distributing valuable, relevant, and consistent content to attract and engage a clearly defined target audience.",
         "price": "Varies based on content creation and distribution strategy"
       }
     ]
   },
+
   {
     "website-development-and-design": [
       {
-        "name": "Website",
+        "name": "Website Developement",
         "description": " Stay one step ahead of your competitors by leveraging our professional SEO services to attract qualified traffic to your website. ",
         "price": "$1000 - $5000 per month"
       },
       {
-        "name": "Pay-Per-Click Advertising (PPC)",
+        "name": "Landing Page",
         "description": "Advertising model where businesses pay a fee each time their ad is clicked, driving traffic to their website.",
         "price": "Varies based on campaign budget and targeting"
       },
       {
-        "name": "Social Media Marketing (SMM)",
+        "name": "E-commerce",
         "description": " Fine-tune social media marketing strategy to grow your business digitally across the globe by using social media platforms and paid campaigns. ",
         "price": "$500 - $5000 per month"
       },
       {
-        "name": "Email Marketing",
+        "name": "CRM panel design",
         "description": "Sending targeted emails to a specific audience to promote your products or services, nurture leads, and build customer relationships.",
         "price": "$300 - $2000 per month"
       },
       {
-        "name": "Content Marketing",
+        "name": "Custom Code Design",
         "description": "Creating and distributing valuable, relevant, and consistent content to attract and engage a clearly defined target audience.",
         "price": "Varies based on content creation and distribution strategy"
       }
     ]
   },
+
   {
     "mobile-applications-developement": [
       {
-        "name": "mobile Serveillance",
+        "name": "Mobile Application Development",
         "description": " Stay one step ahead of your competitors by leveraging our professional SEO services to attract qualified traffic to your website. ",
         "price": "$1000 - $5000 per month"
       },
       {
-        "name": "Pay-Per-Click Advertising (PPC)",
+        "name": "API Development",
         "description": "Advertising model where businesses pay a fee each time their ad is clicked, driving traffic to their website.",
         "price": "Varies based on campaign budget and targeting"
       },
       {
-        "name": "Social Media Marketing (SMM)",
+        "name": "E-commerce Application",
         "description": " Fine-tune social media marketing strategy to grow your business digitally across the globe by using social media platforms and paid campaigns. ",
         "price": "$500 - $5000 per month"
       },
@@ -145,7 +148,7 @@
     ]
   },
   {
-    "mobile-accessories-and-telecom": [
+    "mobile-accessories-and-computers": [
       {
         "name": "Mobile Accessoires Serveillance",
         "description": " Stay one step ahead of your competitors by leveraging our professional SEO services to attract qualified traffic to your website. ",

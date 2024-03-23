@@ -1,7 +1,7 @@
 import './App.scss';
 import Nav from './Component/Nav';
 import Home from './Pages/Home';
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import 'boxicons';
 import Footer from './Component/Footer';
 import Services from './Pages/Services';
@@ -14,16 +14,39 @@ import WhatsappBtn from './Component/CallToAction/WhatsappBtn';
 import BlogPage from './Pages/BlogPage';
 import ServicePage from './Pages/ServicePage';
 import TagPage from './Pages/TagPage';
+import { useRef } from 'react';
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll';
+
+// function ScrollToTop() {
+//   const { pathname } = useLocation();
+
+//   useEffect(() => {
+//     window.scrollTo(0, 0);
+//   }, [pathname]);
+
+//   return null;
+// }
 
 function App() {
+  const containerRef = useRef(null);
   return (
-    <>
+    // <LocomotiveScrollProvider
+    //   options={{
+    //     smooth: true,
+    //     // Add any additional Locomotive Scroll instance options here
+    //   }}
+    //   // onUpdate={() => console.log('Updated, but not on location change!')} // Will trigger on
+    //   watch={[window.location.pathname]}
+    //   containerRef={containerRef}
+    // >
+    <main>
       <Router>
+        {/* <ScrollToTop /> */}
         <Nav />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services/" element={<Services />} />
+          <Route path="/services" element={<Services />} />
           <Route path="/services/:slug" element={<ServicePage />} />
 
           <Route path="/blogs" element={<Blogs />} />
@@ -31,13 +54,13 @@ function App() {
           <Route path="/blogs/tags/:tag" element={<TagPage />} />
           {/* <Route path="/blogs/tags/:tag/:slug" element={<BlogPage />} /> */}
           <Route path="/contact" element={<Contact />} />
-          <Route path="/blogs/tags" element={<Navigate to="/blogs" />} />
+          {/* <Route path="/blogs/tags" element={<Navigate to="/blogs" />} /> */}
         </Routes>
         <CallingBtn />
         <WhatsappBtn />
         <Footer />
       </Router>
-    </>
+    </main>
   );
 }
 

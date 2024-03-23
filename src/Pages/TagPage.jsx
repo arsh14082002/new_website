@@ -38,10 +38,7 @@ const TagPage = () => {
               <p>{trimContent(post.content)}...</p>
               <NavLink
                 className="blog_direct_link"
-                to={`tags/${post.title
-                  .toLowerCase()
-                  .replace(/\s+/g, '-')
-                  .replace(/&/g, 'and')}/${tag}`}
+                to={`tags/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}/`}
               >
                 Read Blog{' '}
               </NavLink>

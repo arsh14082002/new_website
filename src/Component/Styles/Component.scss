@@ -13,8 +13,56 @@ h2 {
 }
 
 h4 {
-  text-align: center I !important;
+  text-align: center !important;
   color: #827171 !important;
   letter-spacing: 2px !important;
-  text-align: center !important;
+}
+
+footer {
+  background-color: #312727;
+  margin-top: 50px;
+  padding: 100px;
+}
+
+footer .footer_rows {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+}
+
+footer .footer_rows .footer_col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+}
+
+footer .footer_rows .footer_col h3 {
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 7px 0;
+}
+
+footer .footer_rows .footer_col ul li {
+  display: flex;
+  align-items: center;
+}
+
+footer .footer_rows .footer_col ul li a {
+  font-size: 20px;
+  letter-spacing: 0.4px;
+}
+
+// breakpoints
+@media screen and (max-width: 1200px) {
+  section {
+    padding: 50px 10px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  h2 {
+    font-size: 30px !important;
+  }
 }

@@ -1,40 +1,76 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .service_page {
   margin-top: 30px;
-  h1 {
-    text-align: center;
-    font-size: 65px;
-    letter-spacing: 2px;
-    color: #827171;
-  }
+}
 
-  .service_page_boxes {
-    display: grid;
-    grid-template-columns: 300px 300px 300px;
-    grid-template-rows: auto;
-    place-content: center;
-    gap: 50px;
+.service_page h1 {
+  text-align: center;
+  font-size: 65px;
+  letter-spacing: 2px;
+  color: #827171;
+}
 
-    .service_page_box {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      text-align: center;
-      padding: 40px 10px;
-      border-radius: 10px;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 20px;
+.service_page .service_page_boxes {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 50px 300px 50px 300px;
+  grid-template-columns: 300px 300px 300px;
+  -ms-grid-rows: auto;
+  grid-template-rows: auto;
+  place-content: center;
+  gap: 50px;
+}
 
-      button {
-        background: #827171;
-        padding: 10px;
-        color: #fff;
-        border-radius: 10px;
-        font-weight: 600;
-        text-transform: capitalize;
-        letter-spacing: 1px;
-      }
-    }
-  }
+.service_page .service_page_boxes > *:nth-child(1) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+}
+
+.service_page .service_page_boxes > *:nth-child(2) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+}
+
+.service_page .service_page_boxes > *:nth-child(3) {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+}
+
+.service_page .service_page_boxes .service_page_box {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 40px 10px;
+  border-radius: 10px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.service_page .service_page_boxes .service_page_box button {
+  background: #827171;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1px;
 }

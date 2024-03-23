@@ -1,7 +1,8 @@
 import React from 'react';
 import BlogsC from '../Component/Home/Blogs';
 import blogsData from '../blogs.json';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const Blogs = () => {
   const truncateContent = (content) => {
@@ -12,6 +13,16 @@ const Blogs = () => {
 
   return (
     <section className="blogs">
+      {/* {blogsData.posts.map((post, i) => 
+        <Helmet>
+          
+        </Helmet>
+      )} */}
+
+      <Helmet>
+        <title>Blogs - Secure Yourself</title>
+      </Helmet>
+
       <div className="blogs_head">
         <h2>Blogs</h2>
         <h4>What We Provide You?</h4>
@@ -20,21 +31,7 @@ const Blogs = () => {
         {blogsData.posts.map((post, i) => (
           <div className="box" key={i}>
             <h3>{post.title}</h3>
-            <div className="tags flex gap-2">
-              {post.tags.map((tag, i) => (
-                <div className="tag" key={i}>
-                  <NavLink
-                    key={tag}
-                    to={`/blogs/tags/${tag
-                      .toLowerCase()
-                      .replace(/\s+/g, '-')
-                      .replace(/&/g, 'and')}`}
-                  >
-                    {tag}
-                  </NavLink>
-                </div>
-              ))}
-            </div>
+
             <div className="box_para">
               <box-icon name="quote-alt-left" type="solid" color="#726d6d"></box-icon>{' '}
               <p>{truncateContent(post.content)}...</p>
@@ -42,9 +39,9 @@ const Blogs = () => {
             </div>
             <NavLink
               className="blog_direct_link"
-              to={`/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
+              to={`/blogs/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
             >
-              Read Blog{' '}
+              Read Blog
             </NavLink>
           </div>
         ))}

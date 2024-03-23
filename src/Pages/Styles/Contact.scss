@@ -1,27 +1,54 @@
-.emailjs_form {
-  form {
-    .form_input {
-      display: flex;
-      flex-direction: column;
-      margin: 10px;
-      input,
-      textarea {
-        width: 500px;
-        padding: 15px;
-        border: 1px solid #1e1e1e;
-        border-radius: 10px;
-        resize: none;
-        letter-spacing: 2px;
-      }
-    }
+.emailjs_form form .form_input {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
 
-    button {
-      width: 500px;
-      padding: 15px;
-      border: 1px solid #1e1e1e;
-      border-radius: 10px;
-      resize: none;
-      letter-spacing: 2px;
-    }
-  }
+.emailjs_form form .form_input input,
+.emailjs_form form .form_input textarea {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  resize: none;
+  letter-spacing: 2px;
+}
+
+.emailjs_form form button {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  resize: none;
+  letter-spacing: 2px;
+}
+
+.emailjs_form form .form_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.emailjs_form form .form_input input,
+.emailjs_form form .form_input textarea {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  resize: none;
+  letter-spacing: 2px;
+}
+
+.emailjs_form form button {
+  width: 500px;
+  padding: 15px;
+  border: 1px solid #1e1e1e;
+  border-radius: 10px;
+  resize: none;
+  letter-spacing: 2px;
 }
