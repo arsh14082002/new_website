@@ -23,7 +23,7 @@ const Blogs = () => {
 
       <div className="blogs_boxes">
         {sortedPosts.slice(0, 3).map((blog, i) => {
-          const truncatedContent = truncateContent(blog.content, 50); // Adjust the number of words you want to display
+          const truncatedContent = truncateContent(blog.main, 50); // Adjust the number of words you want to display
           return (
             <div className="box" key={i}>
               <h3>{blog.title}</h3>

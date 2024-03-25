@@ -72,11 +72,24 @@ header .about .about_content .whatsapp_btn a {
 .about_content_para {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 30px 1fr;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
   font-size: 18px;
   color: #514949;
   line-height: 2;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1024px) {
+  .about_content_para {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header .about .about_content h1 {
+    font-size: 30px;
+  }
 }

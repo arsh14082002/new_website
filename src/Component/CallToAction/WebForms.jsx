@@ -29,6 +29,10 @@ const WebForms = () => {
             mobile: '',
             email: '',
           }}
+          onSubmit={(values, actions) => {
+            console.log('Form submitted with values:', values);
+            actions.setSubmitting(false);
+          }}
         >
           {() => (
             <Form>

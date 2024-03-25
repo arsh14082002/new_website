@@ -43,3 +43,25 @@
 .services .blogs_boxes .box .box_data p {
   text-align: right;
 }
+
+@media screen and (max-width: 1200px) {
+  .services {
+    padding: 50px 10px;
+  }
+
+  .services .blogs_boxes {
+    gap: 50px 10px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .services .blogs_boxes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  .services .blogs_boxes {
+    grid-template-columns: 1fr;
+  }
+}

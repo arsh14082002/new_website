@@ -34,24 +34,51 @@
       "description": "Meet Sam, the heart and brains behind SecureYourself. As the founder and CEO, he's the big boss who makes sure everything runs smoothly. Sam is super passionate about keeping people and businesses safe in today's digital world. He's always coming up with clever ideas to make our security solutions top-notch. With Sam leading the way, SecureYourself is all about staying one step ahead of the bad guys and giving you peace of mind.",
       "contact": [
         {
-          "mobile": "+919999629495"
+          "mobile": "919999629495",
+          "whatsapp": "https://wa.link/ygurnt",
+          "linkedin": "https://www.linkedin.com/",
+          "instagram": "https://www.instagram.com/"
         }
       ]
     },
     {
       "name": "Mohd Arsalan",
       "designation": "Co-founder",
-      "description": "Meet Mohd Arsalan, the co-founder and head of our tech team at WebSeven, a part of SecureYourself. He's like the chief architect of our websites and apps. Arsalan, along with Mohd Junaid, makes sure everything online works smoothly and is safe for you to use. They're the ones behind the scenes, making sure our digital world is awesome and secure."
+      "description": "Meet Mohd Arsalan, the co-founder and head of our tech team at WebSeven, a part of SecureYourself. He's like the chief architect of our websites and apps. Arsalan, along with Mohd Junaid, makes sure everything online works smoothly and is safe for you to use. They're the ones behind the scenes, making sure our digital world is awesome and secure.",
+      "contact": [
+        {
+          "mobile": "919711629495",
+          "whatsapp": "https://wa.link/rig3uu",
+          "linkedin": "https://www.linkedin.com/",
+          "instagram": "https://www.instagram.com/"
+        }
+      ]
     },
     {
       "name": "Mohd Adnan",
       "designation": "Sales Executive",
-      "description": "Say hello to Mohd Adnan, our sales boss at the mobile accessories store. He's the guy who knows everything about phone gadgets and gizmos. Adnan leads our team of sales champs, making sure every customer gets the best deal and finds the perfect accessories for their phone. With Adnan in charge, you can be sure you're getting top-notch service and the coolest gadgets in town!"
+      "description": "Say hello to Mohd Adnan, our sales boss at the mobile accessories store. He's the guy who knows everything about phone gadgets and gizmos. Adnan leads our team of sales champs, making sure every customer gets the best deal and finds the perfect accessories for their phone. With Adnan in charge, you can be sure you're getting top-notch service and the coolest gadgets in town!",
+      "contact": [
+        {
+          "mobile": "919999629495",
+          "whatsapp": "https://wa.link/lg5cyx",
+          "linkedin": "https://www.linkedin.com/",
+          "instagram": "https://www.instagram.com/"
+        }
+      ]
     },
     {
       "name": "Mohd Junaid",
       "designation": "Marketing Executer",
-      "description": "Meet Mohd Junaid, our marketing whiz at WebSeven. He's the one who tells everyone about our cool stuff. Junaid works closely with Arsalan to make WebSeven shine bright. He's all about spreading the word and making sure you know about the awesome things we do. With Junaid on our team, you'll never miss out on the latest and greatest from WebSeven!"
+      "description": "Meet Mohd Junaid, our marketing whiz at WebSeven. He's the one who tells everyone about our cool stuff. Junaid works closely with Arsalan to make WebSeven shine bright. He's all about spreading the word and making sure you know about the awesome things we do. With Junaid on our team, you'll never miss out on the latest and greatest from WebSeven!",
+      "contact": [
+        {
+          "mobile": "918273794348",
+          "whatsapp": "https://wa.link/j0h44q",
+          "linkedin": "https://www.linkedin.com/",
+          "instagram": "https://www.instagram.com/"
+        }
+      ]
     }
   ],
 

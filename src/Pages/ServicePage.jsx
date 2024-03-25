@@ -4,6 +4,7 @@ import './Styles/ServicePage.scss';
 import ServicePageContent from '../Component/ServicePage/ServicePageContent';
 import data from '../Component/ServicePage/data.json';
 import { Helmet } from 'react-helmet';
+import WebForms from '../Component/CallToAction/WebForms';
 
 const ServicePage = () => {
   const { slug } = useParams(); // Destructure the slug from the params object
@@ -34,6 +35,8 @@ const ServicePage = () => {
             </div>
           ))}
       </div>
+
+      <WebForms />
     </div>
   );
 };

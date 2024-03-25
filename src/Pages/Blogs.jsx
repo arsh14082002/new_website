@@ -1,5 +1,3 @@
-import React from 'react';
-import BlogsC from '../Component/Home/Blogs';
 import blogsData from '../blogs.json';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
@@ -34,7 +32,7 @@ const Blogs = () => {
 
             <div className="box_para">
               <box-icon name="quote-alt-left" type="solid" color="#726d6d"></box-icon>{' '}
-              <p>{truncateContent(post.content)}...</p>
+              <p>{truncateContent(post.main)}...</p>
               <box-icon name="quote-alt-right" type="solid" color="#726d6d"></box-icon>{' '}
             </div>
             <NavLink

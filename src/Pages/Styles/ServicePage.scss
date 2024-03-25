@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .service_page {
   margin-top: 30px;
 }
@@ -25,6 +18,7 @@
   grid-template-rows: auto;
   place-content: center;
   gap: 50px;
+  padding: 50px 20px;
 }
 
 .service_page .service_page_boxes > *:nth-child(1) {
@@ -73,4 +67,28 @@
   font-weight: 600;
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1200px) {
+  .service_page {
+    padding: 0 20px;
+  }
+
+  .service_page .service_page_boxes {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px 20px;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .service_page h1 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .service_page .service_page_boxes {
+    grid-template-columns: 1fr;
+    gap: 50px 20px;
+  }
 }
