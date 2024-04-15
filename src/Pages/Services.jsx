@@ -9,7 +9,10 @@ const Services = () => {
   return (
     <section className="services">
       <Helmet>
-        <title>Services | Secure Yourself</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.secureyourself.in/services" />
+        <title>Services | Secure Yourself</title>{' '}
       </Helmet>
 
       <div className="blogs_head">

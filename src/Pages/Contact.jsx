@@ -8,6 +8,9 @@ const Contact = () => {
   return (
     <>
       <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.secureyourself.in/contact" />
         <title>Contact | Secure Yourself</title>
       </Helmet>
 

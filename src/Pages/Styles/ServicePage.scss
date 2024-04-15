@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .service_page {
   margin-top: 30px;
 }
@@ -75,6 +82,7 @@
   }
 
   .service_page .service_page_boxes {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 50px 20px;
   }
@@ -88,6 +96,7 @@
 
 @media screen and (max-width: 550px) {
   .service_page .service_page_boxes {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
     gap: 50px 20px;
   }

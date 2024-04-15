@@ -11,19 +11,16 @@ const Blogs = () => {
 
   return (
     <section className="blogs">
-      {/* {blogsData.posts.map((post, i) => 
-        <Helmet>
-          
-        </Helmet>
-      )} */}
-
       <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.secureyourself.in/blogs" />{' '}
         <title>Blogs - Secure Yourself</title>
       </Helmet>
 
       <div className="blogs_head">
         <h2>Blogs</h2>
-        <h4>What We Provide You?</h4>
+        <h4>Blogs and articles about us.</h4>
       </div>
       <div className="blogs_boxes">
         {blogsData.posts.map((post, i) => (

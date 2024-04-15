@@ -1,6 +1,7 @@
 header {
   width: 100%;
   height: 650px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -13,6 +14,40 @@ header {
   width: 100%;
   height: 100%;
   position: relative;
+
+  .header_content {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+
+    h1 {
+      font-size: 60px;
+    }
+
+    h3 {
+      font-size: 15px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      width: 500px;
+      text-transform: capitalize;
+      letter-spacing: 1px;
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    button {
+      background: #fff;
+      color: #646363;
+      padding: 10px 20px;
+      letter-spacing: 1px;
+    }
+  }
 }
 
 .header_img::after {
@@ -22,12 +57,12 @@ header {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(114, 109, 109, 0.7);
+  background-color: rgba(114, 109, 109, 0.5);
 }
 
 .header_img img {
   width: 100%;
-  height: 100%;
+  height: 650px;
   -o-object-fit: cover;
   object-fit: cover;
 }
@@ -165,27 +200,48 @@ header {
   margin-top: 20px;
 }
 
+.service .service_boxes .service_box {
+  box-shadow: 0 0 10px rgba(114, 109, 109, 0.5);
+  .service_link_for {
+    text-decoration: none;
+    color: #fff;
+    background-color: #646363;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+.blogs .blogs_boxes .box {
+  box-shadow: 0 0 5px rgba(100, 99, 99, 0.5);
+  height: 300px !important;
+}
+
 .service .service_boxes .box,
 .blogs .blogs_boxes .box {
-  text-align: center;
+  // text-align: center;
   padding: 30px 20px;
+  height: 250px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  // align-items: center;
+  // -webkit-box-pack: center;
+  // -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 10px;
+  border-radius: 10px 10px 0 0;
 }
 
 .service .service_boxes .box h3,
@@ -201,8 +257,16 @@ header {
   color: #726d6d;
 }
 
-.service .service_boxes .box a,
 .blogs .blogs_boxes .box a {
+  width: 150px;
+  padding: 10px 20px;
+  background: #726d6d;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.service .service_boxes .box a {
   padding: 10px 20px;
   background: #726d6d;
   color: #fff;
@@ -410,7 +474,8 @@ header {
 @media screen and (max-width: 1400px) {
   .service .service_boxes,
   .blogs .blogs_boxes {
-    grid-template-columns: 300px 300px;
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   footer {
@@ -422,14 +487,32 @@ header {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .service .service_boxes,
+  .blogs .blogs_boxes {
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  header {
+    height: 350px;
+  }
+
+  .header_img img {
+    height: 350px;
+  }
+}
+
 @media screen and (max-width: 992px) {
   footer .footer_rows {
+    -ms-grid-columns: 1fr 1fr 1fr !important;
     grid-template-columns: 1fr 1fr 1fr !important;
   }
 }
 
 @media screen and (max-width: 769px) {
   .form_query .form_query_mote {
+    -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
   }
 
@@ -451,13 +534,14 @@ header {
     width: 100%;
   }
 
-  .header_tags{
+  .header_tags {
     gap: 5px;
   }
 
   .service .service_boxes,
   .blogs .blogs_boxes {
-    grid-template-columns: 300px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
   }
 
   .objective {
@@ -472,6 +556,7 @@ header {
   }
 
   .team .team_boxes {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 
@@ -482,12 +567,14 @@ header {
   }
 
   footer .footer_rows {
+    -ms-grid-columns: 1fr 1fr !important;
     grid-template-columns: 1fr 1fr !important;
   }
 }
 
 @media screen and (max-width: 550px) {
   footer .footer_rows {
+    -ms-grid-columns: 1fr !important;
     grid-template-columns: 1fr !important;
   }
 }

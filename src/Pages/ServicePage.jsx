@@ -20,6 +20,9 @@ const ServicePage = () => {
   return (
     <div className="service_page">
       <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href={`https://www.secureyourself.in/services${formatSlug(slug)}`} />
         <title>{formatSlug(slug)} | SERVICES | SECUREYOURSELF</title>
       </Helmet>
 

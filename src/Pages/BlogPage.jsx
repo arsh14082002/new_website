@@ -3,6 +3,7 @@ import './Styles/BlogPage.scss';
 import { NavLink, useParams } from 'react-router-dom';
 import blogsData from '../blogs.json';
 import g1 from '../assets/blog-gallery/digital-marketing.jpg';
+import { Helmet } from 'react-helmet';
 
 const BlogPage = () => {
   const { slug } = useParams();
@@ -33,6 +34,12 @@ const BlogPage = () => {
     <div className="blog_page">
       {matchedPost ? (
         <>
+          <Helmet>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            {/* <link rel="canonical" href="https://www.secureyourself.in/blogs" />{' '} */}
+            <title>{matchedPost.title} - Secure Yourself</title>
+          </Helmet>
           <h1>{matchedPost.title}</h1>
           <div className="blog_img">
             <img src={g1} alt={matchedPost.title} />

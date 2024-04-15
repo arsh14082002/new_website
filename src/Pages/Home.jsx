@@ -15,10 +15,13 @@ const Home = () => {
   return (
     <>
       <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <link rel="canonical" href="https://www.secureyourself.in/" /> */}
         <title>Secure Yourself - A Complete IT's Solutions</title>
       </Helmet>
       <Header />
-      <About />
+      {/* <About /> */}
       <Service />
       <ObjectiveService />
       <Blogs />

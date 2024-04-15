@@ -1,0 +1,52 @@
+.blogs_head {
+  padding: 0 200px;
+}
+
+.indi_cli_rev {
+  padding: 0 200px;
+  margin-top: 44px;
+}
+
+.indi_cli_rev h3 {
+  text-align: center;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.indi_cli_rev .indi_cli_img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.indi_cli_rev .indi_cli_img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1250px) {
+  .blogs_head,
+  .indi_cli_rev {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .indi_cli_rev .indi_cli_img {
+    -ms-grid-columns: 1fr 10px 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .indi_cli_rev .indi_cli_img img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .indi_cli_rev h3 {
+    font-size: 20px;
+  }
+}

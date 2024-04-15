@@ -17,8 +17,8 @@ const Blogs = () => {
   return (
     <section className="blogs">
       <div className="blogs_head">
-        <h2>Blogs</h2>
-        <h4>What We Provide You?</h4>
+        <h2>Recent Blogs</h2>
+        <h4>Blogs and articles about us.</h4>
       </div>
 
       <div className="blogs_boxes">

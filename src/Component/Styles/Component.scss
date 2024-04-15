@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 section {
   padding: 50px 100px;
 }
@@ -25,13 +32,20 @@ footer {
 }
 
 footer .footer_rows {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 30px 1fr 30px 1fr 30px 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 30px;
 }
 
 footer .footer_rows .footer_col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
   color: #fff;
@@ -45,7 +59,11 @@ footer .footer_rows .footer_col h3 {
 }
 
 footer .footer_rows .footer_col ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
 }
 

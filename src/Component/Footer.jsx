@@ -47,6 +47,12 @@ const Footer = () => {
             <li>
               {' '}
               <box-icon name="chevron-right" color="#fff"></box-icon>
+              <Link to="//custumer-reviews">Reviews</Link>
+            </li>
+
+            <li>
+              {' '}
+              <box-icon name="chevron-right" color="#fff"></box-icon>
               <Link to="/blogs">Blogs</Link>
             </li>
 

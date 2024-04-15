@@ -1,5 +1,14 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 .services .blogs_boxes {
+  display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 300px 70px 300px 70px 300px;
   grid-template-columns: 300px 300px 300px;
   place-content: center;
   gap: 70px;
@@ -9,11 +18,21 @@
 .services .blogs_boxes .box {
   text-align: center;
   padding: 30px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   gap: 10px;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: 10px;
 }
@@ -56,12 +75,14 @@
 
 @media screen and (max-width: 1024px) {
   .services .blogs_boxes {
+    -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
 
 @media screen and (max-width: 530px) {
   .services .blogs_boxes {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }

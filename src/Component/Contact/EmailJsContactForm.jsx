@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const validationSchema = Yup.object().shape({
   from_name: Yup.string().required('Name is required'),
@@ -14,28 +15,32 @@ const validationSchema = Yup.object().shape({
 
 const EmailJsContactForm = () => {
   const form = useRef();
+  // const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const sendEmail = (values, { resetForm }) => {
     emailjs
-      .sendForm('service_miky8pv', 'template_rthqj2s', form.current, {
-        publicKey: '8Mjgb3MSya5vMxKBM',
-        from_name: values.from_name,
-        from_email: values.from_email,
-        message: values.message,
-        mobile_number: values.mobile_number,
-      })
+      .sendForm(
+        import.meta.env.VITE_YOUR_SERVICE_ID,
+        import.meta.env.VITE_YOUR_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: 'sl4aiBZBEheugpR7r', // replace with your public key
+        },
+      )
       .then(
         () => {
-          console.log('SUCCESS!');
-          resetForm(); // Reset the form after successful submission
-          window.alert('Email sent successfully!'); // Display a popup box
+          resetForm();
+          return 1;
         },
         (error) => {
           console.log('FAILED...', error.text);
-          window.alert('Your form was not submitted. Please try again later.'); // Display a popup box for error
         },
       );
   };
+
+  // const handleRecaptchaChange = (token) => {
+  //   setRecaptchaToken(token);
+  // };
 
   return (
     <section className="emailjs_form">
@@ -49,6 +54,9 @@ const EmailJsContactForm = () => {
         validationSchema={validationSchema}
         onSubmit={(values, { resetForm }) => {
           sendEmail(values, { resetForm });
+
+          // if (recaptchaToken) {
+          // }
         }}
       >
         {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
@@ -111,7 +119,6 @@ const EmailJsContactForm = () => {
                 onBlur={handleBlur}
                 value={values.mobile_number}
                 validate={(value) => !/^[+]?[0-9]{10,12}$/.test(value) && 'Invalid mobile number'}
-                placeholder={values && values.mobile_number ? `+91 ${values.mobile_number}` : '+91'}
               />
               <ErrorMessage
                 name="mobile_number"
@@ -119,6 +126,14 @@ const EmailJsContactForm = () => {
                 style={{ color: 'red', fontSize: '12px' }}
               />
             </div>
+
+            {/* reCAPTCHA */}
+            {/* <div className="form_input">
+              <ReCAPTCHA sitekey="your-recaptcha-site-key" onChange={handleRecaptchaChange} />
+              {errors.recaptcha && touched.recaptcha && (
+                <div style={{ color: 'red', fontSize: '12px' }}>{errors.recaptcha}</div>
+              )}
+            </div> */}
             <button type="submit" disabled={isSubmitting}>
               Send
             </button>

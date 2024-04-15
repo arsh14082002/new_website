@@ -8,6 +8,9 @@ const About = () => {
   return (
     <>
       <Helmet>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://www.secureyourself.in/about" />
         <title>About Us - Secure Yourself</title>
       </Helmet>
       <AboutHeader />
