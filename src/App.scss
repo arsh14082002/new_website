@@ -215,6 +215,25 @@ nav .logo {
   }
 }
 
+nav .menu_btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid red;
+  padding: 10px 20px;
+  border-radius: 18px;
+  z-index: 9999;
+  transition: color 0.45s;
+}
+
+nav .menu_btn .menu_btn_text {
+  font-size: 12px;
+}
+
+nav .menu_btn.active {
+  color: #fff;
+}
+
 nav .menu_btn button {
   padding: 10px 30px;
   background: #ccc;
@@ -228,27 +247,29 @@ nav .menu_btn .hamberg {
   flex-direction: column;
   gap: 4px;
   position: relative;
-  z-index: 9999;
-  cursor: pointer;
+  width: 20px;
 }
 
 nav .menu_btn .hamberg span {
   width: 20px;
   height: 2px;
   background-color: #000;
-  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, background 0.45s;
 }
 
-nav .menu_btn .hamberg.active span {
+nav .menu_btn.active .hamberg span {
   background-color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 0;
 }
 
-nav .menu_btn .hamberg.active span:nth-child(1) {
-  transform: rotate(45deg) translate(-1px, -7px);
+nav .menu_btn.active .hamberg span:nth-child(1) {
+  transform: rotate(45deg);
 }
 
-nav .menu_btn .hamberg.active span:nth-child(2) {
-  transform: rotate(320deg) translate(8px, -8px);
+nav .menu_btn.active .hamberg span:nth-child(2) {
+  transform: rotate(-45deg);
   opacity: 1;
 }
 

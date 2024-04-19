@@ -36,9 +36,9 @@ const Header = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
-    fade: true,
+    fade: false,
     cssEase: 'linear',
     touchMove: true,
   };
@@ -59,9 +59,9 @@ const Header = () => {
                 <h3>SERVICE | RELIABLE | SECURITY</h3>
                 <h1>Best Quality Service</h1>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta hic facilis,
-                  mollitia dolore nam quo molestias est eum consequatur, aliquid quod doloremque
-                  fuga atque quidem, aspernatur rem aperiam laudantium quam?
+                  SecureYourself offers the best CCTV cameras, web development, and IT services. We
+                  provide high-quality cameras for safety, create customized websites, and ensure
+                  strong digital security.
                 </p>
                 <button onClick={scrollToServices}>
                   <span>Explore Service</span>

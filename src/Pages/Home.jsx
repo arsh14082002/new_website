@@ -19,7 +19,16 @@ const Home = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {/* <link rel="canonical" href="https://www.secureyourself.in/" /> */}
         <title>Secure Yourself - A Complete IT's Solutions</title>
+        <meta
+          name="description"
+          content="Secure Yourself provides comprehensive IT solutions in Delhi, including CCTV installation, network security, and home security systems. Get a free quote today!"
+        />
+        <meta
+          name="keywords"
+          content="IT solutions Delhi, CCTV installation Delhi, IT security services India, network security solutions, home security systems Delhi, website devlopment, website design, web designing in delhi, best quality service provide in delhi ncr, service 24*7 available "
+        />
       </Helmet>
+
       <Header />
       {/* <About /> */}
       <Service />

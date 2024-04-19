@@ -7,7 +7,7 @@ const Nav = () => {
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    const hamberg = document.querySelector('nav .menu_btn .hamberg');
+    const hamberg = document.querySelector('nav .menu_btn ');
     const navLinks = document.querySelector('nav .nav_links');
 
     const toggleNav = () => {
@@ -33,7 +33,7 @@ const Nav = () => {
   // Function to close the navbar when a link is clicked
   const closeNav = () => {
     const navLinks = document.querySelector('nav .nav_links');
-    const hamberg = document.querySelector('nav .menu_btn .hamberg');
+    const hamberg = document.querySelector('nav .menu_btn ');
     navLinks.classList.remove('active');
     hamberg.classList.remove('active');
     setNavOpen(false); // Close the navbar
@@ -62,6 +62,7 @@ const Nav = () => {
       </div>
 
       <div className="menu_btn">
+        <div className="menu_btn_text">{!navOpen ? 'Open Menu' : 'Exit Menu'}</div>
         <div className="hamberg">
           <span></span>
           {/* <span></span> */}

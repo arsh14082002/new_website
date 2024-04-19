@@ -219,7 +219,7 @@ header {
 
 .blogs .blogs_boxes .box {
   box-shadow: 0 0 5px rgba(100, 99, 99, 0.5);
-  height: 300px !important;
+  height: 400px !important;
 }
 
 .service .service_boxes .box,
@@ -492,6 +492,20 @@ header {
   .blogs .blogs_boxes {
     -ms-grid-columns: 1fr 1fr;
     grid-template-columns: 1fr 1fr;
+  }
+
+  .header_img .header_content h3 {
+    font-size: 12px;
+  }
+
+  .header_img .header_content h1 {
+    font-size: 30px;
+  }
+
+  .header_img .header_content p {
+    font-size: 15px;
+    line-height: 1.4;
+    width: 100%;
   }
 
   header {
