@@ -9,6 +9,8 @@ import website from '../../assets/service-icons/website.png';
 import cyberSecurity from '../../assets/service-icons/cyber-security.png';
 import mobileComputer from '../../assets/service-icons/mobile-computer-accessories.png';
 import mobileApplication from '../../assets/service-icons/mobile-application.png';
+import { CommonBtn } from '../CallToAction/CommonBtn';
+import ServiceCardCommon from '../CallToAction/ServiceCardCommon';
 
 const icons = {
   'Digital Marketing': digitalMarketing,
@@ -28,32 +30,18 @@ const Service = () => {
       </div>
 
       <div className="service_boxes">
-        {data.services.map((service, i) => {
-          const icon = icons[service.name] || null;
-
-          return (
-            <div key={i} className="service_box">
-              <div className="box">
-                {icon && <img src={icon} alt="" width={50} />}
-                <h3>{service.name}</h3>
-                <div className="box_para">
-                  <p>{service.description}</p>
-                </div>
-              </div>
-              <NavLink
-                to={`services/${service.name
-                  .toLowerCase()
-                  .replace(/\s+/g, '-')
-                  .replace(/&/g, 'and')}`}
-                className="service_link_for"
-              >
-                <span>Explore More</span>
-                <FaArrowRight />
-              </NavLink>
-            </div>
-          );
-        })}
+        {data.services.map((service, i) => (
+          <ServiceCardCommon
+            key={i}
+            icon={icons[service.name] || null}
+            title={service.name}
+            description={service.description}
+            route={service.name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+          />
+        ))}
       </div>
+
+      <CommonBtn link={'services'} btnText={'More About Us'} />
     </section>
   );
 };

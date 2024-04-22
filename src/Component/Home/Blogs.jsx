@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom'; // Assuming you're using React Router
 import blogData from '../../blogs.json';
+import { CommonBtn } from '../CallToAction/CommonBtn';
+import BlogCardCommon from '../CallToAction/BlogCardCommon';
 
 const Blogs = () => {
   const truncateContent = (content, maxLength) => {
@@ -14,6 +16,17 @@ const Blogs = () => {
   // Sort the blog posts by date in descending order (most recent first)
   const sortedPosts = blogData.posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  const renderBlogs = (numOfBlogs) => {
+    return sortedPosts.slice(0, numOfBlogs).map((post, i) => (
+      <BlogCardCommon
+        key={i}
+        title={post.title}
+        description={truncateContent(post.main, 50)} // Adjust the number of characters you want to display
+        route={post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+      />
+    ));
+  };
+
   return (
     <section className="blogs">
       <div className="blogs_head">
@@ -22,26 +35,11 @@ const Blogs = () => {
       </div>
 
       <div className="blogs_boxes">
-        {sortedPosts.slice(0, 3).map((blog, i) => {
-          const truncatedContent = truncateContent(blog.main, 50); // Adjust the number of words you want to display
-          return (
-            <div className="box" key={i}>
-              <h3>{blog.title}</h3>
-              <div className="box_para">
-                <box-icon name="quote-alt-left" type="solid" color="#726d6d"></box-icon>{' '}
-                <p>{truncatedContent}</p>
-                <box-icon name="quote-alt-right" type="solid" color="#726d6d"></box-icon>{' '}
-              </div>
-
-              <Link
-                to={`blogs/${blog.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-              >
-                Read Blog{' '}
-              </Link>
-            </div>
-          );
-        })}
+        {/* Display 4 blogs when screen size is less than 1024px and greater than 669px */}
+        {window.innerWidth <= 1024 ? renderBlogs(4) : renderBlogs(3)}
       </div>
+
+      <CommonBtn link={'blogs'} btnText={'See more Blogs'} />
     </section>
   );
 };

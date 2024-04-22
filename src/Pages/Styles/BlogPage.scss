@@ -116,6 +116,20 @@
   opacity: 0.7;
 }
 
+.category_links {
+  .category_link {
+    display: flex;
+    gap: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    a {
+      background-color: #726d6d;
+      padding: 10px;
+      color: #fff;
+    }
+  }
+}
+
 @media screen and (max-width: 1200px) {
   .blog_page .xtra_blogs .blogs_boxes {
     grid-template-columns: 300px 300px;

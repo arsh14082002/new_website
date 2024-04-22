@@ -18,7 +18,9 @@
         "promote economic well being"
       ],
 
-      "metaKeywords": ["react", "javascript", "ui"],
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"],
       "metaDescription": [""]
     },
     {
@@ -28,7 +30,9 @@
       "date": "2024-03-02",
       "main": "The amount of disk space used by a 24-hour footage from a CCTV camera depends on several factors, including the resolution of the footage, the frame rate, and the compression method used. For example, a higher resolution will require more disk space, as will a higher frame rate. Additionally, the type of compression used will affect the file size. As a rough estimate, a 24-hour footage from a standard 1080p CCTV camera with a frame rate of 30 frames per second and using H.264 compression could require approximately 650-700 GB of disk space. However, these numbers can vary significantly based on the specific parameters of the CCTV system.",
 
-      "tags": ["react", "hooks", "state management"]
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"]
     },
     {
       "id": 3,
@@ -54,7 +58,9 @@
 
       "content6": "It's worth noting that the choice between a standard CCTV camera and a high-resolution one depends on the specific requirements of the surveillance application. Higher-resolution cameras are typically favored in scenarios where image clarity and detail are critical, such as facial recognition, license plate identification, or monitoring large areas with fewer cameras. For general surveillance purposes where fine details may not be as crucial, standard CCTV cameras can still provide adequate monitoring capabilities at a lower cost.",
 
-      "tags": ["react", "todo", "application"]
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"]
     },
     {
       "id": 4,
@@ -80,7 +86,9 @@
 
       "content6": "These are just a few examples, and high-resolution cameras can be advantageous in any scenario where capturing fine details and maintaining image clarity are essential for effective surveillance and security purposes.",
 
-      "tags": ["web design", "responsive", "ui"]
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"]
     },
     {
       "id": 5,
@@ -102,7 +110,9 @@
         "NVR camera systems can upload footage to cloud-based servers - an advantage of being connected to the internet. Unlike DVR systems they aren’t limited to on-premise storage, and as a result, they can support a higher capacity compared to DVR systems."
       ],
 
-      "tags": ["api", "restful", "web development"]
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"]
     },
     {
       "id": 6,
@@ -128,7 +138,9 @@
       "bloghead4": "Conclusion",
       "content6": "The main difference between IP and HD cameras lies in how the cameras process, transmit, and store data. IP cameras store and transmit data via the internet. Whereas analog HD cameras must be connected to a DVR before footage can be stored and viewed.",
 
-      "tags": ["python", "programming", "scripting"]
+      "category": ["cctvcamera", "serveillance", "hdcamera"],
+
+      "metaKeywords": ["cctv camera", "serveillance", "monitoring"]
     }
   ]
 }

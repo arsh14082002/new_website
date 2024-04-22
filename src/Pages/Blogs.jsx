@@ -1,6 +1,7 @@
 import blogsData from '../blogs.json';
 import { NavLink } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
+import BlogCardCommon from '../Component/CallToAction/BlogCardCommon';
 
 const Blogs = () => {
   const truncateContent = (content) => {
@@ -24,21 +25,12 @@ const Blogs = () => {
       </div>
       <div className="blogs_boxes">
         {blogsData.posts.map((post, i) => (
-          <div className="box" key={i}>
-            <h3>{post.title}</h3>
-
-            <div className="box_para">
-              <box-icon name="quote-alt-left" type="solid" color="#726d6d"></box-icon>{' '}
-              <p>{truncateContent(post.main)}...</p>
-              <box-icon name="quote-alt-right" type="solid" color="#726d6d"></box-icon>{' '}
-            </div>
-            <NavLink
-              className="blog_direct_link"
-              to={`/blogs/${post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}`}
-            >
-              Read Blog
-            </NavLink>
-          </div>
+          <BlogCardCommon
+            key={i}
+            title={post.title}
+            description={truncateContent(post.main)}
+            route={post.title.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+          />
         ))}
       </div>
     </section>

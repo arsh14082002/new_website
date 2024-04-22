@@ -16,6 +16,8 @@ const validationSchema = Yup.object().shape({
 const EmailJsContactForm = () => {
   const form = useRef();
 
+  // console.log(import.meta.env.VITE_YOUR_SERVICE_ID);
+
   const sendEmail = (values, { resetForm }) => {
     emailjs
       .sendForm(

@@ -10,7 +10,7 @@ const RouteBack = ({ serviceName }) => {
 
   return (
     <div>
-      <button className="py-2 px-6 rounded-[10px] bg-[#ccc]" onClick={handleBackButtonClick}>
+      <button className="py-2 px-6 rounded-[10px] bg-[#ccc] mb-4" onClick={handleBackButtonClick}>
         Back
       </button>
 

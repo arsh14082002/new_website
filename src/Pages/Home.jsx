@@ -10,6 +10,7 @@ import About from '../Component/Home/About';
 import WebForms from '../Component/CallToAction/WebForms';
 import { Helmet } from 'react-helmet';
 import Projects from '../Component/Home/Projects';
+import Project from '../Component/Home/Project';
 
 const Home = () => {
   return (
@@ -32,10 +33,9 @@ const Home = () => {
       <Header />
       {/* <About /> */}
       <Service />
-      {/* <ObjectiveService /> */}
-      {/* <ObjectiveBlogs /> */}
-      <Team />
+      <Project />
       <Blogs />
+      <Team />
       <WebForms />
       <Projects />
     </>

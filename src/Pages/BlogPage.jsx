@@ -29,6 +29,7 @@ const BlogPage = () => {
   // Select first three random blog posts
   const randomPosts = shuffledPosts.slice(0, 3);
 
+  const categories = [...new Set(blogsData.posts.flatMap((post) => post.category))];
   // Render the blog post content if found
   return (
     <div className="blog_page">
@@ -43,8 +44,6 @@ const BlogPage = () => {
             <meta name="keywords" content={matchedPost.metaDescription} />
             <meta name="author" content="Secure Yourself" />
           </Helmet>
-
-          
 
           <h1>{matchedPost.title}</h1>
           <div className="blog_img">
@@ -125,6 +124,17 @@ const BlogPage = () => {
       ) : (
         <h1>Blog post not found</h1>
       )}
+
+      <div className="category_links">
+        <h3>Category</h3>
+        <div className="category_link">
+          {categories.map((category, index) => (
+            <p key={index} className="category_link" to={`/blogs/category/${category}`}>
+              {category}
+            </p>
+          ))}
+        </div>
+      </div>
 
       <div className="xtra_blogs">
         <div className="blogs_head">

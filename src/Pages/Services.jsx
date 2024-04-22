@@ -1,13 +1,30 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import ServiceData from '../data.json';
+import data from '../data.json';
 import { NavLink } from 'react-router-dom';
 import './Styles/Services.scss';
 import WebForms from '../Component/CallToAction/WebForms';
+import ServiceCardCommon from '../Component/CallToAction/ServiceCardCommon';
+import digitalMarketing from '../assets/service-icons/digital-marketing.png';
+// import dg from "../assets/service-icons/di"
+import cctv from '../assets/service-icons/cctv.png';
+import website from '../assets/service-icons/website.png';
+import cyberSecurity from '../assets/service-icons/cyber-security.png';
+import mobileComputer from '../assets/service-icons/mobile-computer-accessories.png';
+import mobileApplication from '../assets/service-icons/mobile-application.png';
+
+const icons = {
+  'Digital Marketing': digitalMarketing,
+  'CCTV surveillance': cctv,
+  'Website Designs & Design': website,
+  'Cyber Security Consultancy': cyberSecurity,
+  'Mobile & Computers Accessories': mobileComputer,
+  'Mobile Applications Developement': mobileApplication,
+};
 
 const Services = () => {
   return (
-    <section className="services">
+    <section className="service">
       <Helmet>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,26 +37,15 @@ const Services = () => {
         <h4>What We Provide You?</h4>
       </div>
 
-      <div className="blogs_boxes">
-        {ServiceData.services.map((service, i) => (
-          <div className="box" key={i}>
-            <h3>{service.name}</h3>
-
-            <div className="box_para">
-              <box-icon name="quote-alt-left" type="solid" color="#726d6d"></box-icon>{' '}
-              <p>{service.description}</p>
-              <box-icon name="quote-alt-right" type="solid" color="#726d6d"></box-icon>{' '}
-            </div>
-            <NavLink
-              className="blog_direct_link"
-              to={`/services/${service.name
-                .toLowerCase()
-                .replace(/\s+/g, '-')
-                .replace(/&/g, 'and')}`}
-            >
-              Explore Our Service
-            </NavLink>
-          </div>
+      <div className="service_boxes">
+        {data.services.map((service, i) => (
+          <ServiceCardCommon
+            key={i}
+            icon={icons[service.name] || null}
+            title={service.name}
+            description={service.description}
+            route={service.name.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and')}
+          />
         ))}
       </div>
 

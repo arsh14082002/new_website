@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 import './Styles/ServicePage.scss';
 import ServicePageContent from '../Component/ServicePage/ServicePageContent';
-import data from '../Component/ServicePage/data.json';
+import data from '../Component/ServicePage/data.json'; // Check the import path
 import { Helmet } from 'react-helmet';
 import WebForms from '../Component/CallToAction/WebForms';
 import RouteBack from '../Component/CallToAction/RouteBack';
@@ -23,7 +23,7 @@ const ServicePage = () => {
       <Helmet>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="canonical" href={`https://www.secureyourself.in/services${formatSlug(slug)}`} />
+        <link rel="canonical" href={`https://www.secureyourself.in/services/${slug}`} />
         <title>{formatSlug(slug)} | SERVICES | SECUREYOURSELF</title>
       </Helmet>
 
@@ -34,12 +34,15 @@ const ServicePage = () => {
       </div>
 
       <div className="service_page_boxes">
-        {serviceData &&
+        {serviceData && serviceData[slug] ? (
           serviceData[slug].map((service, i) => (
             <div key={i}>
               <ServicePageContent {...service} /> {/* Spread service object as props */}
             </div>
-          ))}
+          ))
+        ) : (
+          <p>No data found for {slug}</p>
+        )}
       </div>
 
       <WebForms />

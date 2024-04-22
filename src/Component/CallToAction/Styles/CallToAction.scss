@@ -123,7 +123,9 @@
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  place-items: center;
+  // place-items: center;
+  justify-content: center;
+  gap: 8rem;
 }
 
 .form_query .form_query_mote .form_query_m {
@@ -132,9 +134,9 @@
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  align-items: flex-end;
+  -webkit-box-pack: flex-end;
+  -ms-flex-pack: flex-end;
   justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -230,6 +232,24 @@
   color: #fff;
   text-align: center;
   padding: 10px;
+}
+
+.common_btn {
+  a {
+    // width: 150px;
+    padding: 10px 20px;
+    background: #726d6d;
+    color: #fff !important;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .form_query .form_query_mote {
+    gap: 1rem;
+  }
 }
 
 @media screen and (max-width: 769px) {

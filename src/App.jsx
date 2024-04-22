@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.scss';
 import Nav from './Component/Nav';
 import Home from './Pages/Home';
@@ -16,7 +16,9 @@ import BlogPage from './Pages/BlogPage';
 import ServicePage from './Pages/ServicePage';
 import TagPage from './Pages/TagPage';
 import Reviews from './Pages/Reviews';
+import CategoryBlogs from './Pages/CategoryBlogs';
 import CopyRightsText from './Component/CallToAction/CopyRightsText';
+import RouteBack from './Component/CallToAction/RouteBack';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -29,8 +31,26 @@ function ScrollToTop() {
 }
 
 function App() {
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const startLoading = () => setIsLoading(true);
+    const endLoading = () => setIsLoading(false);
+
+    // Subscribe to route changes and start/stop loading accordingly
+    const unsubscribeStart = window.addEventListener('routeChangeStart', startLoading);
+    const unsubscribeEnd = window.addEventListener('routeChangeEnd', endLoading);
+
+    // Clean up event listeners
+    return () => {
+      unsubscribeStart();
+      unsubscribeEnd();
+    };
+  }, []);
+
   return (
     <main>
+      {isLoading && <div className="loader">Loading...</div>}
       <Router>
         <Nav />
         <ScrollToTop />
@@ -42,8 +62,12 @@ function App() {
           <Route path="/blogs" element={<Blogs />} />
           <Route path="/blogs/:slug" element={<BlogPage />} />
           <Route path="/blogs/tags/:tag" element={<TagPage />} />
+          {/* <Route path="/blogs/category/:id" element={CategoryBlogs} /> */}
+
+          {/* <Route path="/blogs/category/:id" element /> */}
           <Route path="/projects" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/*" element={<h1>No page found</h1>} />
         </Routes>
         <CallingBtn />
         <WhatsappBtn />
