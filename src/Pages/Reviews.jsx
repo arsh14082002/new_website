@@ -36,19 +36,32 @@ const Reviews = () => {
         <h4>We Completed Projects</h4>
       </div>
 
-      <ReviewBox head="MOPA AIRPORT" img1={review1} img2={review2} img3={review3} img4={review4} />
+      <div className="review_boxes">
+        <ReviewBox
+          head="MOPA AIRPORT"
+          img1={review1}
+          img2={review2}
+          img3={review3}
+          img4={review4}
+        />
 
-      <ReviewBox
-        head="RYNOX GEAR DELHI BRANCH"
-        img1={review5}
-        img2={review6}
-        img3={review7}
-        img4={review8}
-      />
+        <ReviewBox
+          head="RYNOX GEAR DELHI BRANCH"
+          img1={review5}
+          img2={review6}
+          img3={review7}
+          img4={review8}
+        />
 
-      <ReviewBox head="CBRE SOUTH ASIA Pvt. Ltd." img1={review10} img2={review11} img3={review12} />
+        <ReviewBox
+          head="CBRE SOUTH ASIA Pvt. Ltd."
+          img1={review10}
+          img2={review11}
+          img3={review12}
+        />
 
-      <ReviewBox head="CHILDREN DENTALS CLINIC" img1={review13} img2={review14} img3={review15} />
+        <ReviewBox head="CHILDREN DENTALS CLINIC" img1={review13} img2={review14} img3={review15} />
+      </div>
 
       <WebForms />
     </>

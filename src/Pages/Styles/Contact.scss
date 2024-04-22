@@ -64,3 +64,11 @@
   resize: none;
   letter-spacing: 2px;
 }
+
+@media screen and (max-width: 669px) {
+  .emailjs_form form .form_input input,
+  .emailjs_form form .form_input textarea,
+  .emailjs_form form .form_input button {
+    width: 100%;
+  }
+}

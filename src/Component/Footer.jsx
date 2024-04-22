@@ -12,8 +12,9 @@ const Footer = () => {
           </div>
           <div className="footer_des">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, debitis architecto quos
-              corrupti quod fugit assumenda unde voluptate nulla eos.
+              SecureYourself offers the best CCTV cameras, web development, and IT services. We
+              provide high-quality cameras for safety, create customized websites, and ensure strong
+              digital security.
             </p>
           </div>
 

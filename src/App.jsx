@@ -16,6 +16,7 @@ import BlogPage from './Pages/BlogPage';
 import ServicePage from './Pages/ServicePage';
 import TagPage from './Pages/TagPage';
 import Reviews from './Pages/Reviews';
+import CopyRightsText from './Component/CallToAction/CopyRightsText';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -47,6 +48,7 @@ function App() {
         <CallingBtn />
         <WhatsappBtn />
         <Footer />
+        <CopyRightsText />
       </Router>
     </main>
   );

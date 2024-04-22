@@ -1,12 +1,12 @@
-import React from 'react';
 import './Styles/BlogPage.scss';
-import { NavLink, useParams } from 'react-router-dom';
+import { NavLink, matchPath, useNavigate, useParams } from 'react-router-dom';
 import blogsData from '../blogs.json';
-import g1 from '../assets/blog-gallery/digital-marketing.jpg';
+import g1 from '../assets/blog-gallery/ip-vs-hd-cctv-camera.jpg';
 import { Helmet } from 'react-helmet';
 
 const BlogPage = () => {
   const { slug } = useParams();
+  const navigate = useNavigate();
 
   // Check if slug exists before trying to manipulate it
   const formattedSlug = slug ? slug.toLowerCase().replace(/\s+/g, '-').replace(/&/g, 'and') : '';
@@ -37,9 +37,15 @@ const BlogPage = () => {
           <Helmet>
             <meta charset="UTF-8" />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            {/* <link rel="canonical" href="https://www.secureyourself.in/blogs" />{' '} */}
+            <link rel="canonical" href={`https://www.secureyourself.in/blogs/${slug}`} />{' '}
             <title>{matchedPost.title} - Secure Yourself</title>
+            <meta name="description" content={matchedPost.metaKeywords} />
+            <meta name="keywords" content={matchedPost.metaDescription} />
+            <meta name="author" content="Secure Yourself" />
           </Helmet>
+
+          
+
           <h1>{matchedPost.title}</h1>
           <div className="blog_img">
             <img src={g1} alt={matchedPost.title} />

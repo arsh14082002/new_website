@@ -207,7 +207,7 @@ nav .logo {
     content: '';
     position: absolute;
     right: -9px;
-    top: -5px;
+    top: -4.5px;
     background-color: #726d6d;
     width: 2px;
     height: 55px;
@@ -219,7 +219,7 @@ nav .menu_btn {
   display: flex;
   align-items: center;
   gap: 7px;
-  border: 1px solid red;
+  border: 2px solid #2f2b2b;
   padding: 10px 20px;
   border-radius: 18px;
   z-index: 9999;
@@ -232,6 +232,7 @@ nav .menu_btn .menu_btn_text {
 
 nav .menu_btn.active {
   color: #fff;
+  border: 2px solid #726d6d;
 }
 
 nav .menu_btn button {

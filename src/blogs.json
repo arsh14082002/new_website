@@ -18,7 +18,8 @@
         "promote economic well being"
       ],
 
-      "tags": ["react", "javascript", "ui"]
+      "metaKeywords": ["react", "javascript", "ui"],
+      "metaDescription": [""]
     },
     {
       "id": 2,

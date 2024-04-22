@@ -32,10 +32,10 @@ const Home = () => {
       <Header />
       {/* <About /> */}
       <Service />
-      <ObjectiveService />
-      <Blogs />
-      <ObjectiveBlogs />
+      {/* <ObjectiveService /> */}
+      {/* <ObjectiveBlogs /> */}
       <Team />
+      <Blogs />
       <WebForms />
       <Projects />
     </>

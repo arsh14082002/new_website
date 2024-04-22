@@ -2,7 +2,6 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import * as Yup from 'yup';
 import { Formik, Form, Field, ErrorMessage } from 'formik';
-import ReCAPTCHA from 'react-google-recaptcha';
 
 const validationSchema = Yup.object().shape({
   from_name: Yup.string().required('Name is required'),
@@ -11,11 +10,11 @@ const validationSchema = Yup.object().shape({
   mobile_number: Yup.string()
     .matches(/^[+]?[0-9]{10,12}$/, 'Invalid mobile number')
     .required('Mobile number is required'),
+  resume: Yup.mixed().required('Resume is required'),
 });
 
 const EmailJsContactForm = () => {
   const form = useRef();
-  // const [recaptchaToken, setRecaptchaToken] = useState('');
 
   const sendEmail = (values, { resetForm }) => {
     emailjs
@@ -38,10 +37,6 @@ const EmailJsContactForm = () => {
       );
   };
 
-  // const handleRecaptchaChange = (token) => {
-  //   setRecaptchaToken(token);
-  // };
-
   return (
     <section className="emailjs_form">
       <Formik
@@ -50,16 +45,23 @@ const EmailJsContactForm = () => {
           from_email: '',
           message: '',
           mobile_number: '',
+          resume: null, // added for file upload
         }}
         validationSchema={validationSchema}
         onSubmit={(values, { resetForm }) => {
           sendEmail(values, { resetForm });
-
-          // if (recaptchaToken) {
-          // }
         }}
       >
-        {({ values, errors, touched, handleChange, handleBlur, handleSubmit, isSubmitting }) => (
+        {({
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+          setFieldValue,
+        }) => (
           <Form id="contact-form" ref={form} onSubmit={handleSubmit}>
             <div className="form_input">
               <label htmlFor="from_name">Name</label>
@@ -77,6 +79,7 @@ const EmailJsContactForm = () => {
                 style={{ color: 'red', fontSize: '12px' }}
               />
             </div>
+
             <div className="form_input">
               <label htmlFor="from_email">Email</label>
               <Field
@@ -93,6 +96,7 @@ const EmailJsContactForm = () => {
                 style={{ color: 'red', fontSize: '12px' }}
               />
             </div>
+
             <div className="form_input">
               <label htmlFor="message">Message</label>
               <Field
@@ -109,6 +113,7 @@ const EmailJsContactForm = () => {
                 style={{ color: 'red', fontSize: '12px' }}
               />
             </div>
+
             <div className="form_input">
               <label htmlFor="mobile_number">Mobile Number</label>
               <Field
@@ -127,16 +132,11 @@ const EmailJsContactForm = () => {
               />
             </div>
 
-            {/* reCAPTCHA */}
-            {/* <div className="form_input">
-              <ReCAPTCHA sitekey="your-recaptcha-site-key" onChange={handleRecaptchaChange} />
-              {errors.recaptcha && touched.recaptcha && (
-                <div style={{ color: 'red', fontSize: '12px' }}>{errors.recaptcha}</div>
-              )}
-            </div> */}
-            <button type="submit" disabled={isSubmitting}>
-              Send
-            </button>
+            <div className="form_input">
+              <button type="submit" disabled={isSubmitting}>
+                Send
+              </button>
+            </div>
           </Form>
         )}
       </Formik>

@@ -1,10 +1,3 @@
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 .whatsapp_btn_fun {
   bottom: 0;
   -webkit-box-orient: vertical;
@@ -229,5 +222,23 @@
   100% {
     -webkit-box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
     box-shadow: 0 0 0 30px rgba(232, 76, 61, 0);
+  }
+}
+
+.copyrighttext {
+  background-color: #242222;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
+
+@media screen and (max-width: 769px) {
+  .form_query form {
+    width: 100%;
+  }
+
+  .form_query form input,
+  .form_query form button {
+    width: 100% !important;
   }
 }

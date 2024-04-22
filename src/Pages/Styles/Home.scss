@@ -8,6 +8,7 @@ header {
 .header {
   width: 100%;
   height: 100%;
+  overflow-x: hidden;
 }
 
 .header_img {
@@ -576,7 +577,6 @@ header {
 
   .form_query form button,
   .form_query form .form_input input {
-    width: 250px !important;
     padding: 10px !important;
   }
 

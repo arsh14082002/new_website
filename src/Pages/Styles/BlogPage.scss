@@ -21,7 +21,7 @@
 }
 
 .blog_page .blog_img img {
-  width: 700px;
+  height: 500px;
 }
 
 .blog_page p,
@@ -104,6 +104,16 @@
 
 .blog_page .xtra_blogs .blogs_boxes .box .box_data p {
   text-align: right;
+}
+
+.routeBack button {
+  padding: 6px 20px;
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.routeBack button:hover {
+  opacity: 0.7;
 }
 
 @media screen and (max-width: 1200px) {

@@ -5,6 +5,7 @@ import ServicePageContent from '../Component/ServicePage/ServicePageContent';
 import data from '../Component/ServicePage/data.json';
 import { Helmet } from 'react-helmet';
 import WebForms from '../Component/CallToAction/WebForms';
+import RouteBack from '../Component/CallToAction/RouteBack';
 
 const ServicePage = () => {
   const { slug } = useParams(); // Destructure the slug from the params object
@@ -25,6 +26,8 @@ const ServicePage = () => {
         <link rel="canonical" href={`https://www.secureyourself.in/services${formatSlug(slug)}`} />
         <title>{formatSlug(slug)} | SERVICES | SECUREYOURSELF</title>
       </Helmet>
+
+      <RouteBack />
 
       <div className="blogs_head">
         <h1>{formatSlug(slug)}</h1>

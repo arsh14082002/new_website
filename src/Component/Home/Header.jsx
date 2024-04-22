@@ -16,18 +16,47 @@ import slide11 from '../../assets/header-slides/slide11.jpg';
 
 const Header = () => {
   const images = [
-    slide8,
-    slide10,
-    slide7,
-    slide11,
-    slide4,
+    {
+      slide: slide8,
+      head: 'CCTV CAMERA',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
 
-    // slide1,
-    // slide2,
-    // slide3,
-    // slide5,
-    // slide6,
-    // slide9,
+    {
+      slide: slide11,
+      head: 'DIGITAL MARKETTING',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
+
+    {
+      slide: slide7,
+      head: 'Best Quality work',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
+
+    {
+      slide: slide4,
+      head: 'Best Quality work',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
+
+    {
+      slide: slide5,
+      head: 'Best Quality work',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
+
+    {
+      slide: slide6,
+      head: 'Best Quality work',
+      content:
+        'SecureYourself offers the best CCTV cameras, web development, and IT services. We provide high-quality cameras for safety, create customized websites, and ensure strong digital security.',
+    },
   ];
 
   const settings = {
@@ -54,15 +83,11 @@ const Header = () => {
         <Slider {...settings}>
           {images.map((img, i) => (
             <div key={i} className="header_img">
-              <img src={img} alt="" />
+              <img src={img.slide} alt={img.head} />
               <div className="header_content">
                 <h3>SERVICE | RELIABLE | SECURITY</h3>
-                <h1>Best Quality Service</h1>
-                <p>
-                  SecureYourself offers the best CCTV cameras, web development, and IT services. We
-                  provide high-quality cameras for safety, create customized websites, and ensure
-                  strong digital security.
-                </p>
+                <h1>{img.head}</h1>
+                <p>{img.content}</p>
                 <button onClick={scrollToServices}>
                   <span>Explore Service</span>
                 </button>

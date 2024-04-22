@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import ServiceData from '../data.json';
 import { NavLink } from 'react-router-dom';

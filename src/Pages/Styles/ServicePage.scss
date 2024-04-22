@@ -7,6 +7,7 @@
 
 .service_page {
   margin-top: 30px;
+  padding: 0 100px;
 }
 
 .service_page h1 {
@@ -91,6 +92,10 @@
 @media screen and (max-width: 769px) {
   .service_page h1 {
     font-size: 30px;
+  }
+
+  .service_page {
+    padding: 10px;
   }
 }
 
